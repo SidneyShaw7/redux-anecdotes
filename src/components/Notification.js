@@ -1,13 +1,8 @@
 import { useSelector } from 'react-redux'
-// import { notifications } from ''
 
 const Notification = () => {
   const notification = useSelector(({ notifications }) => {
-    if (!notifications.message) {
-      return null
-    } else {
-      return notifications.message
-    }
+    return notifications.message && notifications.message
   })
   const style = {
     border: 'solid',
